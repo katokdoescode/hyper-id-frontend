@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../styles/base.css">
+	<title>HyperID | Login</title>
+</head>
+<body>
+	<main class="content-main">
+		<h1 class="login-heading">HyperID | Login</h1>
+		<form id="login" method="POST" class="login-form form">
+			<nav><a href="../">← Back</a></nav>
+			<label class="form__field">
+				<span class="form__label">Username</span>
+				<input
+					class="form__input form__input-text"
+					type="text"
+					name="username"
+					autocomplete="on"
+					autofocus
+					required
+				>
+			</label>
+			<label class="form__field">
+				<span class="form__label">Password</span>
+				<input
+					class="form__input form__input-text"
+					type="password"
+					name="password"
+					autocomplete="on"
+					required
+				>
+			</label>
+			<button type="submit" class="form__submit">Login</button>
+		</form>
+		<div class="loader"></div>
+		<dialog id="modal-message">
+			<p id="message"></p>
+			<form method="dialog">
+				<button type="submit">Close</button>
+			</form>
+		</dialog>
+	</main>
+	<script type="module" src="../../scripts/formControl.js"></script>
+</body>
+</html>

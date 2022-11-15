@@ -1,0 +1,16 @@
+.login-form {
+	display: grid;
+	grid-auto-flow: row;
+	gap: 25px;
+}
+
+.form {
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 100px 35px 0;
+}
+
+.form__field {
+	display: flex;
+	flex-direction: column;
+}
