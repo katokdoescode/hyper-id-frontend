@@ -5,16 +5,18 @@ const sendRequest = async(
 		method = 'GET',
 		url = 'https://jsonplaceholder.typicode.com/todos/1',
 		loader = null,
+		authToken = null,
 	}
 ) => {
 	const xhr = new XMLHttpRequest();
 
 	xhr.open(method, url, true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
+	if(authToken) xhr.setRequestHeader('Authorization', authToken);
 	xhr.send(JSON.stringify(body) ?? '');
 
 	xhr.onreadystatechange = () => {
-		if (xhr.readyState === 4) {
+		if (xhr.readyState === xhr.DONE) {
 			callback({
 				status: xhr.status,
 				body: xhr.response,
