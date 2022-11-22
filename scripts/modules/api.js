@@ -13,6 +13,7 @@ const sendRequest = async(
 	xhr.open(method, url, true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	if(authToken) xhr.setRequestHeader('Authorization', authToken);
+	xhr.withCredentials = true;
 	xhr.send(JSON.stringify(body) ?? '');
 
 	xhr.onreadystatechange = () => {
