@@ -18,9 +18,11 @@ const sendRequest = async(
 
 	xhr.onreadystatechange = () => {
 		if (xhr.readyState === xhr.DONE) {
+			const token = xhr.getResponseHeader('accessToken');
 			callback({
 				status: xhr.status,
 				body: xhr.response,
+				token,
 			});
 		};
 	};

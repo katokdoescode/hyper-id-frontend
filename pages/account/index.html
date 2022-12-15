@@ -4,13 +4,38 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../styles/base.css">
 	<title>HyperID | Account</title>
 </head>
 <body>
 	<main class="content-main">
-		<h1>Your account</h1>
-		<p id="data"></p>
-		<div class="loader"></div>
+		<h1 id="current-username"></h1>
+		<form id="account-form" method="POST" class="login-form form">
+			</label>
+			<label class="form__field">
+				<span class="form__label">Name</span>
+				<input
+					class="form__input form__input-text"
+					type="text"
+					name="name"
+					autocomplete="on"
+					disabled
+				>
+			</label>
+			<label class="form__field">
+				<span class="form__label">Second name</span>
+				<input
+					class="form__input form__input-text"
+					type="text"
+					name="surname"
+					autocomplete="on"
+					disabled
+				>
+			</label>
+			<button id="edit" type="button" class="form__submit">Edit</button>
+			<button id="save" hidden type="submit" class="form__submit">Save</button>
+			<button id="logout" type="button" class="form__submit">Logout</button>
+		</form>
 	</main>
 	<script type="module" src="../../scripts/getAccount.js"></script>
 </body>

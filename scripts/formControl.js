@@ -1,7 +1,9 @@
 import { sendRequest } from './modules/api.js';
 import { showMessage } from './modules/modal.js';
+import { collectUserData } from './modules/collectUserData.js';
 
-const handleResponse = (status, method) => {
+const handleResponse = (status, method, token) => {
+	if(token) document.cookie = `authToken=${token}; path=/`;
 	status === 200 ? allOk(method) : error(status);
 };
 
@@ -36,7 +38,7 @@ const submitLogin = (event) => {
 	const userData = collectUserData(event.target);
 
 	sendRequest(
-		(res) => (handleResponse(res.status, '/pages/account', res.headers)),
+		(res) => (handleResponse(res.status, '/pages/account', res.token)),
 		{
 			url: 'http://localhost:8080/login/',
 			method: 'POST',
@@ -58,18 +60,10 @@ if(formLogin) formLogin.onsubmit = (event) => {
 	submitLogin(event);
 };
 
-const collectUserData = (form) => {
-	if(typeof form === 'object') {
-		const formData = new FormData(form);
-		const userData = [];
-		for(let data of formData) {
-			userData.push(data);
-		}
-		return Object.fromEntries(userData);
-	} else {
-		console.error('Passed value is not an object');
-		return undefined;
-	}
-}
+const formAccount = document.getElementById('account-form');
+if(formAccount) formLogin.onsubmit = (event) => {
+	event.preventDefault();
+	submitLogin(event);
+};
 
 export { submitRegister, submitLogin };
