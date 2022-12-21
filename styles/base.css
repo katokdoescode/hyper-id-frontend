@@ -1,4 +1,10 @@
+@import './colors.css';
 @import './form.css';
+@import './button.css';
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
 
 html {
 	font-family: sans-serif;
