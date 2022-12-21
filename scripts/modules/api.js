@@ -3,14 +3,15 @@ const sendRequest = async(
 	{
 		body,
 		method = 'GET',
-		url = 'https://jsonplaceholder.typicode.com/todos/1',
+		url = '',
 		loader = null,
 		authToken = null,
 	}
 ) => {
 	const xhr = new XMLHttpRequest();
+	const baseURI = 'http://localhost:8080/';
 
-	xhr.open(method, url, true);
+	xhr.open(method, baseURI + url, true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	if(authToken) xhr.setRequestHeader('Authorization', authToken);
 	xhr.withCredentials = true;

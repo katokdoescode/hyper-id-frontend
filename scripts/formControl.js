@@ -25,7 +25,7 @@ const submitRegister = (event) => {
 	sendRequest(
 		(res) => (handleResponse(res.status, '/pages/login')),
 		{
-			url: 'http://localhost:8080/register/',
+			url: 'register/',
 			method: 'POST',
 			loader: '.loader',
 			body: userData,
@@ -40,7 +40,7 @@ const submitLogin = (event) => {
 	sendRequest(
 		(res) => (handleResponse(res.status, '/pages/account', res.token)),
 		{
-			url: 'http://localhost:8080/login/',
+			url: 'login/',
 			method: 'POST',
 			loader: '.loader',
 			body: userData,
@@ -56,12 +56,6 @@ if(formRegister) formRegister.onsubmit = (event) => {
 
 const formLogin = document.getElementById('login');
 if(formLogin) formLogin.onsubmit = (event) => {
-	event.preventDefault();
-	submitLogin(event);
-};
-
-const formAccount = document.getElementById('account-form');
-if(formAccount) formLogin.onsubmit = (event) => {
 	event.preventDefault();
 	submitLogin(event);
 };

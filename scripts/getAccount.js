@@ -22,7 +22,7 @@ const storeChanges = async (event, thisBtn, fields, anotherButton) => {
 	await sendRequest((res) => {
 		if(res.status === 200) toggleEditMode(thisBtn, fields, anotherButton);
 
-	}, { url: 'http://127.0.0.1:8080/account', method: 'PUT', authToken: getToken(), body });
+	}, { url: 'account/', method: 'PUT', authToken: getToken(), body });
 };
 const logout = () => {
 	document.cookie = 'authToken=; path=/';
@@ -46,7 +46,7 @@ window.onload = async () => {
 		nameField.value = name;
 		secondnameField.value = surname;
 
-	}, { url: 'http://127.0.0.1:8080/account', authToken: getToken() });
+	}, { url: 'account/', authToken: getToken() });
 
 	editBtn.addEventListener('click', () => toggleEditMode(editBtn, [nameField, secondnameField], saveBtn));
 	form.addEventListener('submit', (event) => storeChanges(event, editBtn, [nameField, secondnameField], saveBtn));
