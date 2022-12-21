@@ -1,6 +1,7 @@
-@import './colors.css';
+@import './theme.css';
 @import './form.css';
 @import './button.css';
+@import './inputs.css';
 
 *, *::before, *::after {
 	box-sizing: border-box;

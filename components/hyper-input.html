@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/base.css">
+	<title>HyperID | Inputs</title>
+	<style>
+		main {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+		.inputs {
+			max-width: 800px;
+			display: grid;
+			grid-auto-flow: row;
+			gap: 20px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Hyper Inputs</h1>
+		<section class="inputs">
+			<label class="h-input h-input_shadowed">
+				Username
+				<input disabled type="text" class="h-input__input" required placeholder="Fill this field">
+				<span class="h-input__notification">This field is required</span>
+			</label>
+			<label class="h-input">
+				Password
+				<input type="password" class="h-input__input" required placeholder="Fill your password">
+				<span class="h-input__notification">Password is empty</span>
+			</label>
+			<label class="h-input">
+				Email
+				<input type="email" class="h-input__input" required placeholder="test@mail.com">
+				<span class="h-input__notification">Email is not valid</span>
+			</label>
+			<label class="h-input">
+				Tel
+				<input type="tel" class="h-input__input" required placeholder="+1001001001" pattern="^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{4}$">
+				<span class="h-input__notification">Not valid phone number yet</span>
+			</label>
+		</section>
+	</main>
+</body>
+</html>
