@@ -1,0 +1,99 @@
+.h-input {
+	display: grid;
+	grid-template-rows: max-content 1fr 14px;
+	grid-template-areas:
+		"label"
+		"input"
+		"notification";
+	gap: 5px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0.04em;
+}
+
+.h-input * {
+	grid-area: label;
+}
+
+.h-input__input {
+	grid-area: input;
+	border: 2px solid var(--h-black);
+	border-radius: var(--hyper-radius-second);
+	margin: 0;
+	padding: 12px;
+	color: var(--h-black);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	outline: none;
+	transition: box-shadow .133s ease-in-out, color .133s ease-in-out;
+}
+
+.h-input__input::placeholder {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.h-input_shadowed .h-input__input {
+	box-shadow: var(--black-shadow);
+}
+
+.h-input__notification {
+	display: none;
+	grid-area: notification;
+	color: var(--error-red);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.03em;
+}
+
+.h-input__input:focus-visible {
+	box-shadow: var(--black-shadow);
+}
+
+ .h-input__input:valid {
+	box-shadow: var(--green-shadow);
+}
+
+.h-input__input:invalid {
+	box-shadow: var(--red-shadow);
+	border-color: var(--error-red);
+}
+
+.h-input__input:placeholder-shown {
+	border-color: var(--h-black);
+	box-shadow: none;
+}
+
+.h-input_shadowed .h-input__input:placeholder-shown {
+	border-color: var(--h-black);
+	box-shadow: var(--black-shadow);
+}
+
+.h-input__input:invalid + .h-input__notification {
+	display: block;
+}
+
+.h-input__input:placeholder-shown + .h-input__notification {
+	display: none;
+}
+
+.h-input__input[type="text"]:required:invalid:placeholder-shown:focus,
+.h-input__input[type="password"]:required:invalid:placeholder-shown:focus {
+	box-shadow: var(--red-shadow);
+	border-color: var(--error-red);
+}
+
+.h-input__input[type="text"]:required:invalid:placeholder-shown:focus + .h-input__notification,
+.h-input__input[type="password"]:required:invalid:placeholder-shown:focus + .h-input__notification {
+	display: block;
+}
+
+.h-input .h-input__input:disabled {
+	border-color: var(--disabled-gray);
+	box-shadow: none;
+}
