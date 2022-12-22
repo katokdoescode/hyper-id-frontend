@@ -3,6 +3,7 @@
 @import './button.css';
 @import './inputs.css';
 @import './modal.css';
+@import './loader.css';
 
 *, *::before, *::after {
 	box-sizing: border-box;
@@ -30,41 +31,6 @@ body {
 
 .login-heading {
 	text-align: center;
-}
-
-.loader {
-	display: none;
-	width: 35px;
-	height: 35px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-17px, -17px);
-	border-radius: 50%;
-	border-width: 3px;
-	border-style: solid;
-	border-color: transparent;
-	animation: .5s infinite steps(1, end) loading;
-	opacity: .8;
-}
-
-@keyframes loading {
-	0% {
-		border-color: tomato transparent tomato tomato;
-	}
-	25% {
-		border-color: tomato tomato transparent tomato;
-	}
-	50% {
-		border-color: tomato tomato tomato transparent;
-	}
-	75% {
-		border-color: transparent tomato tomato tomato;
-	}
-}
-
-.loading {
-	display: block;
 }
 
 .welcome-nav {
