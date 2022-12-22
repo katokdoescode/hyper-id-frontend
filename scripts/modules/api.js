@@ -9,12 +9,19 @@ const sendRequest = async(
 	}
 ) => {
 	const xhr = new XMLHttpRequest();
-	const baseURI = 'http://localhost:8080/';
+	const baseURI = 'http://127.0.0.1:8080/';
 
 	xhr.open(method, baseURI + url, true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	if(authToken) xhr.setRequestHeader('Authorization', authToken);
-	xhr.withCredentials = true;
+	/**
+	 * Set true if server is on another domain,
+	 * and you have secure connection
+	 *
+	 * See Web API reference here:
+	 * https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials
+	 */
+	// xhr.withCredentials = false;
 	xhr.send(JSON.stringify(body) ?? '');
 
 	xhr.onreadystatechange = () => {
