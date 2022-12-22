@@ -11,6 +11,10 @@ html {
 	font-family: sans-serif;
 }
 
+body {
+	margin: 0;
+}
+
 .login-heading {
 	text-align: center;
 }
