@@ -124,6 +124,10 @@ button.h-button_arrow-left.h-button_arrow-right,
 	box-shadow: var(--red-shadow);
 }
 
+.h-button[hidden] {
+	display: none;
+}
+
 @keyframes leftWiggle {
 	from {
 		transform: translateX(-3px);
