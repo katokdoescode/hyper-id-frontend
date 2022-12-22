@@ -15,7 +15,6 @@ const allOk = (method) => {
 };
 
 const error = (status) => {
-	console.log(status)
 	const statusMessage = {
 		401: 'Hmm.. login or password not correct.',
 		403: 'You have not permission to login',
