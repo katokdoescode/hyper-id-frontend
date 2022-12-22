@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/base.css">
+	<title>HyperID | Form</title>
+</head>
+<body>
+	<main>
+		<h1>Hyper Form</h1>
+		<section class="forms">
+			<form action="./" method="GET" class="h-form">
+				<section class="h-form__section-heading">
+					<section class="h-form__section-logo">
+						<img src="../assets/svg/hyper-id-logo.svg" alt="HyperID" width="358" height="67">
+					</section>
+					<p class="h-form__section-message">
+						Hello, form!
+					</p>
+				</section>
+
+				<fieldset class="h-form__fieldset">
+					<label class="h-input h-input_shadowed">
+						Username
+						<input type="text" class="h-input__input" required placeholder="Fill this field">
+						<span class="h-input__notification">This field is required</span>
+					</label>
+
+					<label class="h-input h-input_shadowed">
+						Password
+						<input type="password" class="h-input__input " required placeholder="Fill your password">
+						<span class="h-input__notification">Password is empty</span>
+					</label>
+				</fieldset>
+
+				<section class="h-form__section-buttons">
+					<button class="h-button h-button_arrow-left">
+						<span>Register</span>
+					</button>
+					<a href="/pages/register/index.html" class="h-button h-button_arrow-right">Register</a>
+				</section>
+			</form>
+		</section>
+	</main>
+</body>
+</html>
