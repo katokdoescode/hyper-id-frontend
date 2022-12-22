@@ -15,7 +15,17 @@ const allOk = (method) => {
 };
 
 const error = (status) => {
-	showMessage({text: `Server returns response status ${status}`});
+	console.log(status)
+	const statusMessage = {
+		401: 'Hmm.. login or password not correct.',
+		403: 'You have not permission to login',
+		409: 'This username already taken.',
+		500: 'Server error :(',
+		501: 'Server error :(',
+		502: 'Server error :(',
+		0: 'Maybe CORS error. Check console.',
+	};
+	showMessage({ text: statusMessage[status] });
 };
 
 const submitRegister = (event) => {
