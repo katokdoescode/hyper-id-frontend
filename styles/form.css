@@ -27,7 +27,6 @@
 	display: grid;
 	grid-template-rows: max-content minmax(50px, 100%);
 	gap: 50px;
-
 }
 
 section[class^="h-form__section-"],
