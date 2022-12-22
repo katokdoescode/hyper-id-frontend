@@ -17,6 +17,7 @@
 	grid-area: label;
 }
 
+/* The Input */
 .h-input__input {
 	grid-area: input;
 	border: 2px solid var(--h-black);
@@ -27,7 +28,7 @@
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
-	outline: none;
+	outline-offset: -5px;
 	transition: box-shadow .133s ease-in-out, color .133s ease-in-out;
 }
 
@@ -37,10 +38,12 @@
 	line-height: 24px;
 }
 
+/* Shadow class for input */
 .h-input_shadowed .h-input__input {
 	box-shadow: var(--black-shadow);
 }
 
+/* Bottom notification */
 .h-input__notification {
 	display: none;
 	grid-area: notification;
@@ -51,6 +54,7 @@
 	letter-spacing: 0.03em;
 }
 
+/* STATES */
 .h-input__input:focus-visible {
 	box-shadow: var(--black-shadow);
 }

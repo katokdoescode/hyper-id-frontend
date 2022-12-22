@@ -9,7 +9,7 @@ const handleResponse = (status, method, token) => {
 
 const allOk = (method) => {
 	showMessage(
-		{text: 'Login and password are correct'},
+		{ text: 'Login and password are correct' },
 		() => window.location.assign(method)
 	);
 };
@@ -23,11 +23,11 @@ const submitRegister = (event) => {
 	const userData = collectUserData(event.target);
 
 	sendRequest(
-		(res) => (handleResponse(res.status, '/pages/login')),
+		(res) => ( handleResponse(res.status, '/pages/login') ),
 		{
 			url: 'register/',
 			method: 'POST',
-			loader: '.loader',
+			loader: '.h-loader',
 			body: userData,
 		}
 	);
@@ -42,7 +42,7 @@ const submitLogin = (event) => {
 		{
 			url: 'login/',
 			method: 'POST',
-			loader: '.loader',
+			loader: '.h-loader',
 			body: userData,
 		}
 	);
