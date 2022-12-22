@@ -10,12 +10,10 @@
 	grid-auto-rows: max-content;
 	justify-content: center;
 	gap: 50px;
-	height: 100vh;
 }
 
 @media screen and (min-width: 678px) {
 	.h-form {
-		height: auto;
 		border: 3px solid var(--h-black);
 		box-shadow: var(--black-shadow);
 		border-radius: var(--hyper-radius);
@@ -24,13 +22,16 @@
 	}
 }
 
+/* HEADING SECTION */
 .h-form__section-heading {
 	grid-area: heading;
 	display: grid;
 	grid-template-rows: max-content minmax(50px, 100%);
 	gap: 50px;
+
 }
 
+/* CLEARING STYLES FOR ALL FORM SECTIONS */
 section[class^="h-form__section-"],
 .h-form__fieldset {
 	border: none;
@@ -44,10 +45,11 @@ section[class^="h-form__section-"],
 	object-fit: contain;
 }
 
+/* FORM MESSAGE */
 .h-form__section-message {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
 	margin-top: 40px;
 	min-width: 230px;
 	min-height: 50px;
@@ -58,13 +60,15 @@ section[class^="h-form__section-"],
 	color: var(--h-white);
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 30px;
+	line-height: 48px;
 }
 
+/* FIELDSET SECTION */
 .h-form__fieldset {
 	grid-area: fields;
 }
 
+/* BUTTONS SECTION */
 .h-form__section-buttons {
 	grid-area: buttons;
 	display: grid;

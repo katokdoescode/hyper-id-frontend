@@ -21,6 +21,7 @@
 	transition: box-shadow .133s ease-in-out;
 	cursor: pointer;
 	text-decoration: none;
+	outline-offset: -5px;
 }
 
 .h-button *,

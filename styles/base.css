@@ -1,9 +1,9 @@
-@import './theme.css';
-@import './form.css';
-@import './button.css';
-@import './inputs.css';
-@import './modal.css';
-@import './loader.css';
+@import './theme.css'; 	/* Variables		 	*/
+@import './form.css'; 	/* Form styles 			*/
+@import './button.css';	/* Button styles 		*/
+@import './inputs.css';	/* Form inputs styles 	*/
+@import './modal.css';	/* Dialog modal styles 	*/
+@import './loader.css';	/* Loader styles 		*/
 
 *, *::before, *::after {
 	box-sizing: border-box;
@@ -27,13 +27,4 @@ body {
 
 .h-block-centered {
 	flex-grow: 1;
-}
-
-.login-heading {
-	text-align: center;
-}
-
-.welcome-nav {
-	max-width: fit-content;
-	margin: 0 auto;
 }
