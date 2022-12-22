@@ -23,7 +23,7 @@ const storeChanges = async (event, thisBtn, fields, anotherButton) => {
 };
 const logout = () => {
 	document.cookie = 'authToken=; path=/';
-	window.location.href='/pages'
+	window.location.href='./index.html'
 };
 
 window.onload = async () => {

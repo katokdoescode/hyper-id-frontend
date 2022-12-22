@@ -28,7 +28,7 @@ const submitRegister = (event) => {
 	const userData = collectUserData(event.target);
 
 	sendRequest(
-		(res) => ( handleResponse(res.status, '/pages/login') ),
+		(res) => ( handleResponse(res.status, './login.html') ),
 		{
 			url: 'register/',
 			method: 'POST',
@@ -43,7 +43,7 @@ const submitLogin = (event) => {
 	const userData = collectUserData(event.target);
 
 	sendRequest(
-		(res) => (handleResponse(res.status, '/pages/account', res.token)),
+		(res) => (handleResponse(res.status, './account.html', res.token)),
 		{
 			url: 'login/',
 			method: 'POST',
