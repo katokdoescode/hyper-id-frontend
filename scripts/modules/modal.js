@@ -9,5 +9,3 @@ const showMessage = ({ text, appearence = 1.5 }, callback) => {
 		if(callback) callback();
 	}, (appearence * 1000));
 }
-
-export { showMessage };

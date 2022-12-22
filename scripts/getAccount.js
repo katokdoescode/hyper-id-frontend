@@ -1,6 +1,3 @@
-import { sendRequest } from './modules/api.js';
-import { collectUserData } from './modules/collectUserData.js';
-
 const getToken = () => {
 	return document.cookie
 	.split('; ')

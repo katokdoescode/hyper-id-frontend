@@ -1,4 +1,4 @@
-export const collectUserData = (form) => {
+const collectUserData = (form) => {
 	if(typeof form === 'object') {
 		const formData = new FormData(form);
 		const userData = [];

@@ -14,7 +14,7 @@ const sendRequest = async(
 	xhr.open(method, baseURI + url, true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	if(authToken) xhr.setRequestHeader('Authorization', authToken);
-	xhr.withCredentials = true;
+	xhr.withCredentials = false;
 	xhr.send(JSON.stringify(body) ?? '');
 
 	xhr.onreadystatechange = () => {
@@ -38,7 +38,3 @@ const toggleLoad = (loader) => {
 	const loaderElement = document.querySelector(loader);
 	loaderElement.classList.toggle('loading');
 };
-
-
-
-export { sendRequest };

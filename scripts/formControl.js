@@ -1,7 +1,3 @@
-import { sendRequest } from './modules/api.js';
-import { showMessage } from './modules/modal.js';
-import { collectUserData } from './modules/collectUserData.js';
-
 const handleResponse = (status, method, token) => {
 	if(token) document.cookie = `authToken=${token}; path=/`;
 	status === 200 ? allOk(method) : error(status);
@@ -68,5 +64,3 @@ if(formLogin) formLogin.onsubmit = (event) => {
 	event.preventDefault();
 	submitLogin(event);
 };
-
-export { submitRegister, submitLogin };
