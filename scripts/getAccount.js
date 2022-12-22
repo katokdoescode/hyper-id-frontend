@@ -16,7 +16,6 @@ const toggleEditMode = (thisBtn, fields, anotherButton) => {
 
 const storeChanges = async (event, thisBtn, fields, anotherButton) => {
 	event.preventDefault();
-	console.debug(event.target)
 	const body = collectUserData(event.target)
 
 	await sendRequest((res) => {
