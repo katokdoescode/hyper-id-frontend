@@ -1,0 +1,36 @@
+.h-modal {
+	border: none;
+	box-shadow: var(--black-shadow);
+	padding: 20px;
+	min-width: 200px;
+	position: absolute;
+}
+
+.h-modal__message {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+.h-modal__form {
+	display: flex;
+	justify-content: end;
+	padding: 0 10px 0 0;
+}
+
+*[class^="h-modal__btn"] {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 20px;
+	min-width: 30px;
+	color: var(--h-white);
+	border: 1px solid var(--h-black);
+	box-shadow: var(--black-shadow);
+	background-color: var(--h-blue);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+}
