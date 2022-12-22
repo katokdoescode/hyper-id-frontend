@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/base.css">
+	<title>HyperID | modal</title>
+	<style>
+		html {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+			background-color: var(--h-yellow);
+		}
+		.modal {
+			max-width: 800px;
+			display: grid;
+			grid-auto-flow: row;
+			gap: 20px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Hyper modal</h1>
+		<section class="modal">
+
+			<dialog id="modal-message" class="h-modal" open>
+				<p id="h-modal__message">Test message here</p>
+				<form method="dialog" class="h-modal__form">
+					<button type="submit" class="h-modal__btn-close">OK</button>
+				</form>
+			</dialog>
+
+		</section>
+	</main>
+</body>
+</html>

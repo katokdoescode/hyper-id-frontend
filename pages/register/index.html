@@ -54,13 +54,14 @@
 		</form>
 
 		<div class="loader"></div>
-		<dialog id="modal-message">
-			<p id="message"></p>
-			<form method="dialog">
-				<button type="submit">Close</button>
-			</form>
-		</dialog>
 	</main>
+
+	<dialog id="modal-message" class="h-modal">
+		<p id="message" class="h-modal__message"></p>
+		<form method="dialog" class="h-modal__form">
+			<button type="submit" class="h-modal__btn-close">OK</button>
+		</form>
+	</dialog>
 	<script type="module" src="../../scripts/formControl.js"></script>
 </body>
 </html>

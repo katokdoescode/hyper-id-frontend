@@ -2,6 +2,7 @@
 @import './form.css';
 @import './button.css';
 @import './inputs.css';
+@import './modal.css';
 
 *, *::before, *::after {
 	box-sizing: border-box;
