@@ -15,6 +15,18 @@ body {
 	margin: 0;
 }
 
+.h-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--h-blue);
+}
+
+.h-block-centered {
+	flex-grow: 1;
+}
+
 .login-heading {
 	text-align: center;
 }

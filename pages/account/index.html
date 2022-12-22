@@ -7,34 +7,48 @@
 	<link rel="stylesheet" href="../../styles/base.css">
 	<title>HyperID | Account</title>
 </head>
-<body>
-	<main class="content-main">
-		<h1 id="current-username"></h1>
-		<form id="account-form" method="POST" class="login-form form">
-			</label>
-			<label class="form__field">
-				<span class="form__label">Name</span>
-				<input
-					class="form__input form__input-text"
-					type="text"
-					name="name"
-					autocomplete="on"
-					disabled
-				>
-			</label>
-			<label class="form__field">
-				<span class="form__label">Second name</span>
-				<input
-					class="form__input form__input-text"
-					type="text"
-					name="surname"
-					autocomplete="on"
-					disabled
-				>
-			</label>
-			<button id="edit" type="button" class="form__submit">Edit</button>
-			<button id="save" hidden type="submit" class="form__submit">Save</button>
-			<button id="logout" type="button" class="form__submit">Logout</button>
+<body class="h-body">
+	<main class="h-block-centered">
+		<form id="account-form" method="POST" class="h-form">
+			<section class="h-form__section-heading">
+				<section class="h-form__section-logo">
+					<img src="../../assets/svg/hyper-id-logo.svg" alt="HyperID" width="358" height="67">
+				</section>
+				<h1 class="h-form__section-message">
+					Hello, <span id="current-username"></span>!
+				</h1>
+			</section>
+
+			<fieldset class="h-form__fieldset">
+				<label class="h-input h-input_shadowed">
+					Name
+					<input
+						class="h-input__input"
+						type="text"
+						name="name"
+						autocomplete="on"
+						placeholder="Enter your name"
+						disabled
+					>
+				</label>
+				<label class="h-input h-input_shadowed">
+					Second name
+					<input
+						class="h-input__input"
+						type="text"
+						name="surname"
+						autocomplete="on"
+						placeholder="Enter your second name"
+						disabled
+					>
+				</label>
+			</fieldset>
+
+			<section class="h-form__section-buttons">
+				<button id="edit" type="button" class="h-button"><span>Edit</span></button>
+				<button id="save" hidden type="submit" class="h-button"><span>Save</span></button>
+				<button id="logout" type="button" class="h-button h-button_arrow-left">Logout</button>
+			</section>
 		</form>
 	</main>
 	<script type="module" src="../../scripts/getAccount.js"></script>

@@ -7,33 +7,50 @@
 	<link rel="stylesheet" href="../../styles/base.css">
 	<title>HyperID | Login</title>
 </head>
-<body>
-	<main class="content-main">
-		<h1 class="login-heading">HyperID | Login</h1>
-		<form id="login" method="POST" class="login-form form">
-			<nav><a href="../">← Back</a></nav>
-			<label class="form__field">
-				<span class="form__label">Username</span>
-				<input
-					class="form__input form__input-text"
-					type="text"
-					name="username"
-					autocomplete="on"
-					autofocus
-					required
-				>
-			</label>
-			<label class="form__field">
-				<span class="form__label">Password</span>
-				<input
-					class="form__input form__input-text"
-					type="password"
-					name="password"
-					autocomplete="on"
-					required
-				>
-			</label>
-			<button type="submit" class="form__submit">Login</button>
+<body class="h-body">
+	<main class="h-block-centered">
+		<form id="login" method="POST" class="h-form">
+			<section class="h-form__section-heading">
+				<section class="h-form__section-logo">
+					<h1 hidden>HyperID</h1>
+					<img src="../../assets/svg/hyper-id-logo.svg" alt="HyperID" width="358" height="67">
+				</section>
+			</section>
+
+			<fieldset class="h-form__fieldset">
+				<label class="h-input h-input_shadowed">
+					Username
+					<input
+						class="h-input__input"
+						type="text"
+						name="username"
+						placeholder="username"
+						autocomplete="on"
+						autofocus
+						required
+					>
+					<span class="h-input__notification">This field is required</span>
+				</label>
+
+				<label class="h-input h-input_shadowed">
+					Password
+					<input
+						type="password"
+						class="h-input__input"
+						required
+						placeholder="Enter new password"
+						type="password"
+						name="password"
+						autocomplete="on"
+						required
+					>
+					<span class="h-input__notification">Password is empty</span>
+				</label>
+			</fieldset>
+
+			<section class="h-form__section-buttons">
+				<button type="submit" class="h-button h-button_arrow-right">Login</button>
+			</section>
 		</form>
 		<div class="loader"></div>
 		<dialog id="modal-message">
